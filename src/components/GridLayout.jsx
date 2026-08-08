@@ -15,7 +15,7 @@ export default function GridLayout({ data ,numberRow,handlers,page}) {
             {data.slice(PaginationNumber.firstItem, PaginationNumber.lastItem).map((dataItem) => {
                 return (
                     <article className={clsx('duration-150 p-5  space-y-3 border-2 border-zinc-200 bg-white rounded-lg',dataItem.isPublished||dataItem.status==='پاسخ داده شده'?'hover:border-green-600/50':'hover:border-red-600/50')} key={dataItem.id}>
-                        {(page==='users'||page==='products')&&<img className="h-55 flex-center overflow-hidden size-full object-cover duration-300 hover:scale-105  transition-all rounded-lg" src={dataItem.img} alt="i cant open this photo" />}
+                        {(page==='users'||page==='products')&&<img className="h-55 flex-center overflow-hidden size-full object-cover duration-300 hover:scale-105  transition-all rounded-lg" src={`${import.meta.env.BASE_URL}${dataItem.img.replace(/^\/+/, "")}`} alt="i cant open this photo" />}
                         {page==='users'?
                         <div className="space-y-2">
                             <div className="flex items-center justify-between">

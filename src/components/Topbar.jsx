@@ -33,7 +33,7 @@ export default function Topbar() {
                 </button>
                 <div className="w-px h-6 border-l-2 border-zinc-200"></div>
                 <div className="flex items-center gap-2 cursor-pointer select-none p-3 hover:bg-black/10 rounded-md duration-150">
-                    <img className="size-10 rounded-full object-cover hidden min-[380px]:block" src="/images/profile-avatar.jpg" alt="i cant open this photo" />
+                    <img className="size-10 rounded-full object-cover hidden min-[380px]:block" src={`${import.meta.env.BASE_URL}${"/images/profile-avatar.jpg".replace(/^\/+/, "")}`} alt="i cant open this photo" />
                     <div>
                         <p className="text-sm font-bold">رضا هوشمند</p>
                         <p className="text-xs text-gray-600">مدیر عامل</p>

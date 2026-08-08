@@ -12,7 +12,7 @@ export default function page() {
             <section className="pb-20">
                 <div className="flex items-center justify-between bg-white p-4 rounded-xl border-2 border-zinc-200 shadow-xl">
                     <div className="flex items-center gap-3">
-                        <img className="size-13 rounded-full inline-block" src="/images/profile-avatar.jpg" alt="i cant open this photo" />
+                        <img className="size-13 rounded-full inline-block" src={`${import.meta.env.BASE_URL}${"/images/profile-avatar.jpg".replace(/^\/+/, "")}`} alt="i cant open this photo" />
                         <div>
                             <p className="font-bold text-lg">{ticket.sender}</p>
                             <p className="text-sm text-gray-500">{ticket.title}</p>
