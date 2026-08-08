@@ -10,7 +10,6 @@ import { EditProduct_User,DeleteProduct_User,ChangePublisheProduct } from "../..
 import LastProduct_User from "../../components/LastProduct_User";
 import GridLayout from "../../components/GridLayout";
 export default function page() {
-    // const {AllProducts,setAllProducts,AllMembers,AllTickets}=useOutletContext()
     const {AllDataProject,setAllDataProject}=useOutletContext()
     const summaryData = generateSummaries({ productsLength: AllDataProject.AllProducts.length, usersLength: AllDataProject.AllMembers.filter((member)=>member.role=='کاربر').length, ticketsLength: AllDataProject.AllTickets.length, adminsLength: AllDataProject.AllMembers.filter((member)=>member.role=='مدیر').length });
     const chartData = generateChartData({ productsLength: AllDataProject.AllProducts.length, usersLength: AllDataProject.AllMembers.filter((member)=>member.role=='کاربر').length, ticketsLength: AllDataProject.AllTickets.length, adminsLength: AllDataProject.AllMembers.filter((member)=>member.role=='مدیر').length });

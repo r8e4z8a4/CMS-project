@@ -12,7 +12,7 @@ return (
                     return (
                         <article key={item.id} className={clsx("flex duration-150 mt-3 hover:scale-101 border-2 border-zinc-200 p-3 rounded-md items-center gap-3", type === "products" ? "h-30 hover:bg-linear-to-t shadow hover:from-neutral-100/70" : "hover:bg-linear-to-b shadow-[inset_0_-2px_4px_rgba(0,0,0,0.1)] h-20 from-zinc-50/50")}>
                             <div className={clsx("overflow-hidden shrink-0", type === "products" ? "rounded-lg size-24" : "size-14 rounded-full")}>
-                                <img src={item.img} alt="i cant open this photo" className="size-full object-cover" />
+                                <img loading="lazy" src={`${import.meta.env.BASE_URL}${item.img.replace(/^\/+/, "")}`} alt="i cant open this photo" className="size-full object-cover" />
                             </div>
                             <div className={clsx("flex justify-between flex-col", type === "products" ? "h-full" : null)}>
                                 <div className={clsx("space-y-1", type === "users" ? "text-xs" : null)}>

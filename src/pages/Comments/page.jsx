@@ -8,7 +8,6 @@ import clsx from "clsx";
 export default function page() {
     const [ActiveLayout,setActiveLay]=useState(true)
     const [isMobile,setisMobile]=useState(false)
-    // const {AllComments,setAllComments}=useOutletContext()
     const {AllDataProject}=useOutletContext()
     useEffect(()=>{
         const widthScreen=()=>{

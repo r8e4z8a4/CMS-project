@@ -3,8 +3,6 @@ import Topbar from "./Topbar";
 import Sidebar from "./Sidebar";
 import BackgroundOverlay from "./BackgroundOverlay";
 import { useEffect, useState } from "react";
-import { products } from "../data/products";
-import users from "../data/users";
 import { fetchGET } from "../api/fetchGET";
 import { CirclesWithBar } from "react-loader-spinner";
 export default function RootLayout() {

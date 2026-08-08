@@ -23,7 +23,7 @@ export default function Topbar() {
                 {isOpen?<IoClose onClick={()=>setIsOpen(false)}/>:<HiMenu onClick={()=>setIsOpen(true)}/>}
             </button>
             <div className={clsx("fixed size-full! top-0 left-0 z-5 bg-black/30 duration-300 px-5", isOpen? "" : "invisible opacity-0")}>
-                <aside className={clsx('w-45 rounded-r-xl bg-white drop-shadow-2xl/30 h-screen fixed top-0 left-0 border-r-2 border-zinc-200 p-6 transition-all duration-300',isOpen?'translate-x-0':'-translate-x-full')}>
+                <aside className={clsx('w-55 rounded-r-xl bg-white drop-shadow-2xl/30 h-screen fixed top-0 left-0 border-r-2 border-zinc-200 p-6 transition-all duration-300',isOpen?'translate-x-0':'-translate-x-full')}>
                         <Menus menus={menus}/>
                 </aside>
             </div>
@@ -33,7 +33,7 @@ export default function Topbar() {
                 </button>
                 <div className="w-px h-6 border-l-2 border-zinc-200"></div>
                 <div className="flex items-center gap-2 cursor-pointer select-none p-3 hover:bg-black/10 rounded-md duration-150">
-                    <img className="size-10 rounded-full object-cover hidden min-[380px]:block" src={`${import.meta.env.BASE_URL}${"/images/profile-avatar.jpg".replace(/^\/+/, "")}`} alt="i cant open this photo" />
+                    <img loading="lazy" className="size-10 rounded-full object-cover hidden min-[380px]:block" src={`${import.meta.env.BASE_URL}${"/images/profile-avatar.jpg".replace(/^\/+/, "")}`} alt="i cant open this photo" />
                     <div>
                         <p className="text-sm font-bold">رضا هوشمند</p>
                         <p className="text-xs text-gray-600">مدیر عامل</p>
